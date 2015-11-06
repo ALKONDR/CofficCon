@@ -4,6 +4,9 @@ import json
 
 LAST_UPDATE_ID = None
 bot_phrases = []
+# choose_van = telegram.replykeyboardmarkup.ReplyKeyboardMarkup([1, 2, 3],resize_keyboard = True, one_time_keyboard = True)
+custom_keyboard = [[ '1' , '2' , '3' ]]
+reply_markup = telegram.ReplyKeyboardMarkup(custom_keyboard, one_time_keyboard = True)
 
 def main():
     inp = open('phrases.txt', 'r')
@@ -21,7 +24,7 @@ def main():
 
 def echo(bot):
     global LAST_UPDATE_ID
-    for update in bot.getUpdates(offset = LAST_UPDATE_ID, timeout = 10):
+    for update in bot.getUpdates(offset = LAST_UPDATE_ID, timeout = 100):
         chat_id = update.message.chat_id
         message = None
         print update.message
@@ -52,8 +55,8 @@ def echo(bot):
             print map
 
             bot.sendPhoto(chat_id = chat_id, photo = map)
-            bot.sendMessage(chat_id = chat_id, text = bot_phrases[0])
-
+            bot.sendMessage(chat_id = chat_id, text = bot_phrases[0], reply_markup = reply_markup)
+            
 
 
         LAST_UPDATE_ID = update.update_id + 1
