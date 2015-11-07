@@ -1,1 +1,15 @@
-Выберите точку
+Choose point where you want to get your drink 
+Cancel
+Add
+Your final order
+Your current order
+Value is too big
+What coffee do you wnat?
+r
+l
+Send please your location
+Choose volume
+Bill or more drink?
+Your bill: 
+Thank you
+Thank you for your order

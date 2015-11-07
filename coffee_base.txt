@@ -1,0 +1,10 @@
+Latte 119 139
+Cappuccino 169 219
+Espresso 89 99
+Americano 129 159
+Macchiato 149 179
+Romance 119 139
+Riestretto 169 199
+Mocha 139 149
+Longo 129 159
+Doppio 99 119
